@@ -1,0 +1,5 @@
+[bindings.swift]
+module_name="lib_name"
+
+[bindings.kotlin]
+package_name="lib_name"

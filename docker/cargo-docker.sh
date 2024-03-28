@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 
 # Key points for these cmd-line args:
 #  * run a transient image that deletes itself on successful completion
@@ -7,7 +8,7 @@
 #  * run via bash in interactive mode to get correct $PATH setup from .bashrc
 docker run \
     -ti --rm \
-    -v $HOME/.cargo/registry:/usr/local/cargo/registry \
-    -v $PWD:/mounted_workdir \
+    -v $HOME/.cargo/registry:/usr/local/cargo/registry:z\
+    -v $PWD:/mounted_workdir:z \
     -w /mounted_workdir \
-    rfkelly/uniffi-ci:latest bash -i -c "cargo $*"
+    rfkelly/uniffi-ci:latest bash -i -c "pwd && cargo $*"

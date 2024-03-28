@@ -1,0 +1,10 @@
+[package]
+name = "lib-ext"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+uniffi = { workspace = true }
+
+

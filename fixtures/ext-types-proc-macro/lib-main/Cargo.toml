@@ -1,0 +1,15 @@
+[package]
+name = "lib-main"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["lib", "cdylib"]
+# Note the crate name is different from the namespace used by this crate.
+name = "lib_main"
+
+[dependencies]
+uniffi = { workspace = true }
+lib-ext2 = { path = "../lib-ext2"}
